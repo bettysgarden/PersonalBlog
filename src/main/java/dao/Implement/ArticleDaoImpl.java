@@ -66,7 +66,7 @@ public class ArticleDaoImpl implements ArticleDao {
     }
 
     @Override
-    public Long addArticle(Article article) throws DaoException {
+    public long addArticle(Article article) throws DaoException {
         long articleId = -1L;
 
         try (Connection con = ConnectionFactory.getConnection();

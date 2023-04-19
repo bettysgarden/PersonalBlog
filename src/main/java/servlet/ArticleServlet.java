@@ -11,15 +11,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import service.Implement.ArticleService;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-@WebServlet("/")
+@WebServlet("/article")
 public class ArticleServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-    private static String INSERT_OR_EDIT = "./article.jsp";
-    private static String LIST_ARTICLE = "./listArticles.jsp";
+    private static final String INSERT_OR_EDIT = "view/article.jsp";
+    private static final String LIST_ARTICLE = "view/list.jsp";
     private final ArticleService as;
 
     public ArticleServlet() {
@@ -28,27 +24,32 @@ public class ArticleServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String forward = "";
-        String action = request.getParameter("action");
         try {
+            String forward;
+            String action = request.getParameter("action");
+
             if (action.equalsIgnoreCase("delete")) {
                 long articleId = Long.parseLong(request.getParameter("id"));
                 as.deleteArticle(articleId);
                 forward = LIST_ARTICLE;
                 request.setAttribute("articles", as.getArticles());
+
             } else if (action.equalsIgnoreCase("edit")) {
                 forward = INSERT_OR_EDIT;
                 long articleId = Long.parseLong(request.getParameter("id"));
                 Article article = as.getArticleById(articleId);
                 request.setAttribute("article", article);
+
             } else if (action.equalsIgnoreCase("listArticles")) {
                 forward = LIST_ARTICLE;
                 request.setAttribute("articles", as.getArticles());
+
             } else {
                 forward = INSERT_OR_EDIT;
             }
             RequestDispatcher view = request.getRequestDispatcher(forward);
             view.forward(request, response);
+
         } catch (BusinessException e) {
             throw new RuntimeException(e);
         }
@@ -59,15 +60,12 @@ public class ArticleServlet extends HttpServlet {
         article.setTitle(request.getParameter("title"));
         article.setContent(request.getParameter("content"));
         try {
-            String articleid = request.getParameter("Articleid");
-            if (articleid == null || articleid.isEmpty()) {
-
-                as.addArticle(request);
-
-
+            String articleId = request.getParameter("id");
+            if (articleId == null || articleId.isEmpty()) {
+                as.addArticle(article);
             } else {
-                article.setId(Long.parseLong(articleid));
-                as.updateArticle(request);
+                article.setId(Long.parseLong(articleId));
+                as.updateArticle(article);
             }
             RequestDispatcher view = request.getRequestDispatcher(LIST_ARTICLE);
             request.setAttribute("articles", as.getArticles());

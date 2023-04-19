@@ -11,12 +11,12 @@ public interface ArticleDao {
 
     Article getANearArticle(String time, int lessOrMore) throws DaoException;
 
-    Long addArticle(Article a) throws DaoException;
+    long addArticle(Article a) throws DaoException;
 
     void deleteArticle(long id) throws DaoException;
 
     List<Article> getAllArticles() throws DaoException;
     Article getArticleById(long id) throws DaoException;
 
-    void updateArticle(Article node) throws DaoException;
+    void updateArticle(Article article) throws DaoException;
 }

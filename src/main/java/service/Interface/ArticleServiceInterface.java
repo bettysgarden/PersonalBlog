@@ -15,9 +15,9 @@ public interface ArticleServiceInterface {
 
     Article getArticleById(long id) throws BusinessException;
 
-    Article addArticle(HttpServletRequest request) throws BusinessException;
+    long addArticle(Article article) throws BusinessException;
 
-    Article updateArticle(HttpServletRequest request) throws BusinessException;
+    void updateArticle(Article article) throws BusinessException;
 
     void deleteArticle(long id) throws BusinessException;
 }

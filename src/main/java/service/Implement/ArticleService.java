@@ -87,29 +87,9 @@ public class ArticleService implements ArticleServiceInterface {
 
 
     @Override
-    public Article addArticle(HttpServletRequest request) throws BusinessException {
+    public long addArticle(Article article) throws BusinessException {
         try {
-            // Create a new article
-            try {
-                request.setCharacterEncoding("utf-8");
-            } catch (UnsupportedEncodingException e1) {
-                e1.printStackTrace();
-            }
-
-            Article article = null;
-//            try {
-//                article = Form2Bean.articleForm2Bean(request);
-//            } catch (FailException e) {
-//                e.printStackTrace();
-//            }
-            if (article == null) {
-                return null;
-            }
-            Long a = articleDao.addArticle(article);
-            if (a == null) {
-                return null;
-            }
-            return article;
+            return articleDao.addArticle(article);
 
         } catch (DaoException ex) {
             throw new BusinessException(ex);
@@ -118,16 +98,10 @@ public class ArticleService implements ArticleServiceInterface {
     }
 
     @Override
-    public Article updateArticle(HttpServletRequest request) throws BusinessException {
+    public void updateArticle(Article article) throws BusinessException {
         try {
-            // Get the old article id
-            long old_id = Long.parseLong(request.getParameter("id"));
-
-            // delete old articles
-            this.deleteArticle(old_id);
-            return this.addArticle(request);
-
-        } catch (BusinessException ex) {
+            articleDao.updateArticle(article);
+        } catch (DaoException ex) {
             throw new BusinessException(ex);
         }
     }

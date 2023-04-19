@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
+<%@ page contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -21,6 +21,7 @@
     </tr>
     </thead>
     <tbody>
+    <%--@elvariable id="articles" type="java.util.List"--%>
     <c:forEach items="${articles}" var="article">
         <tr>
             <td><c:out value="${article.id}"/></td>
@@ -29,12 +30,12 @@
 <%--            <td><fmt:formatDate pattern="yyyy-MM-dd" value="${article.time}"/></td>--%>
             <td><c:out value="${article.time}"/></td>
             <td><c:out value="${article.commentCount}"/></td>
-            <td><a href="ArticleServlet?action=edit&articleId=<c:out value="${article.id}"/>">Update</a></td>
-            <td><a href="ArticleServlet?action=delete&articleId=<c:out value="${article.id}"/>">Delete</a></td>
+            <td><a href="ArticleServlet?action=edit&id=<c:out value="${article.id}"/>">Update</a></td>
+            <td><a href="ArticleServlet?action=delete&id=<c:out value="${article.id}"/>">Delete</a></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-<p><a href="<c:url value="/ArticleServlet?action=insert"/>">Add Article</a></p>
+<p><a href="<c:url value="ArticleServlet?action=insert"/>">Add Article</a></p>
 </body>
 </html>
