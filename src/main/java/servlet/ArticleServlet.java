@@ -12,10 +12,10 @@ import service.Implement.ArticleService;
 
 import java.io.IOException;
 
-@WebServlet("/article")
+@WebServlet("/")
 public class ArticleServlet extends HttpServlet {
-    private static final String INSERT_OR_EDIT = "view/article.jsp";
-    private static final String LIST_ARTICLE = "view/list.jsp";
+    private static final String INSERT_OR_EDIT = "/view/article.jsp";
+    private static final String LIST_ARTICLE = "/view/list.jsp";
     private final ArticleService as;
 
     public ArticleServlet() {
@@ -47,6 +47,7 @@ public class ArticleServlet extends HttpServlet {
             } else {
                 forward = INSERT_OR_EDIT;
             }
+
             RequestDispatcher view = request.getRequestDispatcher(forward);
             view.forward(request, response);
 

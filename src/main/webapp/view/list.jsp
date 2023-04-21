@@ -1,6 +1,5 @@
 <%@ page contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -15,7 +14,7 @@
         <th>Id</th>
         <th>Title</th>
         <th>Content</th>
-        <th>Time</th>
+        <th>Time Added</th>
         <th>Comment Count</th>
         <th colspan=2>Action</th>
     </tr>
@@ -27,7 +26,6 @@
             <td><c:out value="${article.id}"/></td>
             <td><c:out value="${article.title}"/></td>
             <td><c:out value="${article.content}"/></td>
-<%--            <td><fmt:formatDate pattern="yyyy-MM-dd" value="${article.time}"/></td>--%>
             <td><c:out value="${article.time}"/></td>
             <td><c:out value="${article.commentCount}"/></td>
             <td><a href="ArticleServlet?action=edit&id=<c:out value="${article.id}"/>">Update</a></td>
