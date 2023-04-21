@@ -14,13 +14,15 @@
 
 <form method="POST" action='ArticleServlet' name="formAddArticle">
     Title : <input
-            type="text" name="title"
-            value="<c:out value="${article.title}" />"/>
+        type="text" name="title"
+        value="<c:out value="${article.title}" />"/>
     <br/>
     Content : <input
-            type="text" name="content"
-            value="<c:out value="${article.content}" />"/>
+        type="text" name="content"
+        value="<c:out value="${article.content}" />"/>
     <br/>
+    <input
+            type="submit" value="Submit"/>
 </form>
 </body>
 </html>

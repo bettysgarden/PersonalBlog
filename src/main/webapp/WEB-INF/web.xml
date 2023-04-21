@@ -18,24 +18,4 @@
         <url-pattern>/ArticleServlet</url-pattern>
     </servlet-mapping>
 
-<!--    &lt;!&ndash;list servlet&ndash;&gt;-->
-<!--    <servlet>-->
-<!--        <display-name>listS</display-name>-->
-<!--        <servlet-name>ListArticlesServlet</servlet-name>-->
-<!--        <servlet-class>servlet.ListArticlesServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>ListArticlesServlet</servlet-name>-->
-<!--        <url-pattern>/ListArticlesServlet</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    &lt;!&ndash;add servlet&ndash;&gt;-->
-<!--    <servlet>-->
-<!--        <display-name>addS</display-name>-->
-<!--        <servlet-name>AddArticleServlet</servlet-name>-->
-<!--        <servlet-class>servlet.AddArticleServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>AddArticleServlet</servlet-name>-->
-<!--        <url-pattern>/AddArticleServlet</url-pattern>-->
-<!--    </servlet-mapping>-->
 </web-app>
