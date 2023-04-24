@@ -9,14 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e461aba-5d9e-459e-97a3-ed5ce67cc065" name="Changes" comment="single article showing">
+    <list default="true" id="3e461aba-5d9e-459e-97a3-ed5ce67cc065" name="Changes" comment="added comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Implement/ArticleDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Implement/ArticleDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Implement/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Implement/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/edit_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/edit_add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Implement/ArticleDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Implement/ArticleDaoImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +291,7 @@
       <updated>1681895105759</updated>
       <workItem from="1681895106908" duration="712000" />
       <workItem from="1681895897696" duration="14759000" />
-      <workItem from="1682062783224" duration="27870000" />
+      <workItem from="1682062783224" duration="31145000" />
     </task>
     <task id="LOCAL-00001" summary="servlets working">
       <created>1682065487057</created>
@@ -318,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682322604788</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added comments">
+      <created>1682350763815</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682350763815</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +342,8 @@
     <MESSAGE value="servlets working" />
     <MESSAGE value="small changes" />
     <MESSAGE value="single article showing" />
-    <option name="LAST_COMMIT_MESSAGE" value="single article showing" />
+    <MESSAGE value="added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -381,13 +385,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/servlet/NewCommentServlet.java</url>
-          <line>50</line>
+          <line>48</line>
           <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dao/Implement/CommentDaoImpl.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/dao/Implement/CommentDaoTest.java</url>
