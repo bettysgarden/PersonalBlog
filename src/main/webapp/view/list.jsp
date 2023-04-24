@@ -28,7 +28,7 @@
         <th style="width: 200px">Title</th>
         <th style="width: 600px">Content</th>
         <th style="width: 100px">Time Added</th>
-        <%--        <th>Comment Count</th>--%>
+        <th style="width: 100px">Comment Count</th>
         <th colspan=2>Action</th>
     </tr>
     </thead>
@@ -45,7 +45,7 @@
 
             <td><c:out value="${article.content}"/></td>
             <td><c:out value="${article.time}"/></td>
-                <%--            <td><c:out value="${article.commentCount}"/></td>--%>
+                            <td><c:out value="${article.commentCount}"/></td>
             <td><a href="CommandsServlet?action=edit&id=<c:out value="${article.id}"/>">Update</a></td>
             <td><a href="CommandsServlet?action=delete&id=<c:out value="${article.id}"/>">Delete</a></td>
         </tr>

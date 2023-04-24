@@ -51,7 +51,7 @@ public class ArticleService implements ArticleServiceInterface {
     @Override
     public Article getNextArticle(String time) throws BusinessException {
         try {
-            return articleDao.getANearArticle(time, articleDao.LESS);
+            return articleDao.getANearArticle(time, articleDao.MORE);
         } catch (DaoException ex) {
             throw new BusinessException(ex);
         }

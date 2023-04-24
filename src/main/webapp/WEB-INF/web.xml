@@ -27,5 +27,15 @@
         <servlet-name>ArticleServlet</servlet-name>
         <url-pattern>/ArticleServlet</url-pattern>
     </servlet-mapping>
+    <!--new comment servlet-->
+    <servlet>
+        <display-name>NewCommentServlet</display-name>
+        <servlet-name>NewCommentServlet</servlet-name>
+        <servlet-class>servlet.NewCommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewCommentServlet</servlet-name>
+        <url-pattern>/NewCommentServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

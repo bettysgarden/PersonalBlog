@@ -43,11 +43,9 @@ public class ArticleDaoImpl implements ArticleDao {
             } else if (lessOrMore == this.MORE) {
                 pst = con.prepareStatement(SELECT_MORE);
             }
+            pst.setString(1, time);
 
-            ResultSet rs = null;
-            if (pst != null) {
-                rs = pst.executeQuery();
-            }
+            ResultSet rs = pst.executeQuery();
             assert rs != null;
             if (rs.next()) {
                 long articleId = rs.getLong("idArticle"); // TODO: 07.04.2023 null?
