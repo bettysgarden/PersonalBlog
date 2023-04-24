@@ -7,6 +7,16 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    <!--commands servlet-->
+    <servlet>
+        <display-name>CommandsServlet</display-name>
+        <servlet-name>CommandsServlet</servlet-name>
+        <servlet-class>servlet.CommandsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommandsServlet</servlet-name>
+        <url-pattern>/CommandsServlet</url-pattern>
+    </servlet-mapping>
     <!--article servlet-->
     <servlet>
         <display-name>ArticleServlet</display-name>

@@ -6,7 +6,7 @@
     <title>Insert title here</title>
 </head>
 <body>
-<jsp:forward page="ArticleServlet?action=listArticles"/>
+<jsp:forward page="CommandsServlet?action=listArticles"/>
 <%--<jsp:forward page="ListArticlesServlet?action=listArticles"/>--%>
 </body>
 </html>

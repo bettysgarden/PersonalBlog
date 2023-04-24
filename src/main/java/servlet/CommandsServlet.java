@@ -13,12 +13,12 @@ import service.Implement.ArticleService;
 import java.io.IOException;
 
 @WebServlet("/")
-public class ArticleServlet extends HttpServlet {
-    private static final String INSERT_OR_EDIT = "/view/article.jsp";
+public class CommandsServlet extends HttpServlet {
+    private static final String INSERT_OR_EDIT = "/view/edit_add.jsp";
     private static final String LIST_ARTICLE = "/view/list.jsp";
     private final ArticleService as;
 
-    public ArticleServlet() {
+    public CommandsServlet() {
         super();
         as = new ArticleService();
     }
@@ -43,7 +43,6 @@ public class ArticleServlet extends HttpServlet {
             } else if (action.equalsIgnoreCase("listArticles")) {
                 forward = LIST_ARTICLE;
                 request.setAttribute("articles", as.getArticles());
-
             } else {
                 forward = INSERT_OR_EDIT;
             }

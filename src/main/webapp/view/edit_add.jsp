@@ -9,20 +9,37 @@
     <script type="text/javascript" src="../../js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="../../js/jquery-ui-1.8.18.custom.min.js"></script>
     <title>Add new article</title>
+    <style>
+        input.text {
+            width:  800px;
+            height: 400px;
+            padding: 5px 10px 5px 10px;
+            border:1px solid #999;
+            font-size:16px;
+            font-family: Tahoma;
+        }
+    </style>
 </head>
 <body>
 
-<form method="POST" action='ArticleServlet' name="formAddArticle">
-    Title : <input
+<form method="POST" action='CommandsServlet' name="formAddArticle" >
+    Title : <input class="text"
         type="text" name="title"
         value="<c:out value="${article.title}" />"/>
     <br/>
-    Content : <input
+    Content : <input  class="text"
         type="text" name="content"
         value="<c:out value="${article.content}" />"/>
     <br/>
     <input
             type="submit" value="Submit"/>
 </form>
+<div id="footer">
+
+    <div class="r_div">
+        <a href="#"><input class="btn btn-default" value="Back to top" style="width:50%;"/></a>
+    </div>
+
+</div><!-- footer -->
 </body>
 </html>

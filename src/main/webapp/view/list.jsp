@@ -6,16 +6,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
     <title>Show All Articles</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            /*width:1200px;*/
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-<table border=1>
+<h1>My Blog</h1>
+
+<table class="center">
     <thead>
     <tr>
         <th>Id</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Time Added</th>
-        <th>Comment Count</th>
+        <th style="width: 200px">Title</th>
+        <th style="width: 600px">Content</th>
+        <th style="width: 100px">Time Added</th>
+        <%--        <th>Comment Count</th>--%>
         <th colspan=2>Action</th>
     </tr>
     </thead>
@@ -24,16 +37,22 @@
     <c:forEach items="${articles}" var="article">
         <tr>
             <td><c:out value="${article.id}"/></td>
-            <td><c:out value="${article.title}"/></td>
+                <%--            <td><c:out value="${article.title}"/></td>--%>
+
+            <td><a href="ArticleServlet?id=<c:out value="${article.id}"/>"><c:out
+                    value="${article.title}"/></a></td>
+
+
             <td><c:out value="${article.content}"/></td>
             <td><c:out value="${article.time}"/></td>
-            <td><c:out value="${article.commentCount}"/></td>
-            <td><a href="ArticleServlet?action=edit&id=<c:out value="${article.id}"/>">Update</a></td>
-            <td><a href="ArticleServlet?action=delete&id=<c:out value="${article.id}"/>">Delete</a></td>
+                <%--            <td><c:out value="${article.commentCount}"/></td>--%>
+            <td><a href="CommandsServlet?action=edit&id=<c:out value="${article.id}"/>">Update</a></td>
+            <td><a href="CommandsServlet?action=delete&id=<c:out value="${article.id}"/>">Delete</a></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-<p><a href="<c:url value="ArticleServlet?action=insert"/>">Add Article</a></p>
+
+<p><a href="<c:url value="CommandsServlet?action=insert"/>">Add Article</a></p>
 </body>
 </html>
