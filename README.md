@@ -5,7 +5,7 @@ a personal blog site based on Jsp/Servlet
 
 *Личный блог*
 
-![Screenshot 2023-03-08 at 21 25 20](https://user-images.githubusercontent.com/99659178/223801606-53cab4c3-9986-4276-b5de-4cdca1876504.png)
+![Screenshot 2023-04-27 at 14 29 27](https://user-images.githubusercontent.com/99659178/234849092-9a362653-bade-4359-bf99-84c8f1839201.png)
 
 ### Базовая функциональность:
 
@@ -13,4 +13,3 @@ a personal blog site based on Jsp/Servlet
     - стартовая страница с preview статей → читать дальше
 - Под каждой статьей можно оставлять комментарий
     - для этого пользователь должен ввести свое имя и email
-- статьи могут быть отсортированы по тегам, которые проставлены заранее
