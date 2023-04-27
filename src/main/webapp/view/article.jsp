@@ -18,6 +18,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>${article.title} | MyBlog</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["formAddComment"]["name"].value;
+            if (name === "" || name == null) {
+                alert("Name must be filled out");
+                return false;
+            }
+            var email = document.forms["formAddComment"]["email"].value;
+            if (email === "" || email == null) {
+                alert("Email must be filled out");
+                return false;
+            }
+            var comm = document.forms["formAddComment"]["content"].value;
+            if (comm === "" || comm == null) {
+                alert("Comment space must be filled out");
+                return false;
+            }
+        }
+    </script>
     <!-- Custom styles for this template -->
     <style>
         body {
@@ -159,7 +178,7 @@
         <div>
             <h3>Leave a comment</h3>
         </div>
-        <form action="NewCommentServlet?id=${article.id}" method="post">
+        <form name="formAddComment" action="NewCommentServlet?id=${article.id}" method="post" onsubmit="return validateForm()">
             Name : <input style="width:30%" class="form-control" type="text" name="name">
             <br/>
             Email : <input style="width:30%" class="form-control" type="text" name="email" placeholder="name@example.com">

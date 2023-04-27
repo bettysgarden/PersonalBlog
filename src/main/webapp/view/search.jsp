@@ -16,6 +16,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Title</title>
+    <script>
+        function validateForm() {
+            var x = document.forms["formSearch"]["arg"].value;
+            if (x === "" || x == null) {
+                alert("Please type the word to search by.");
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -34,7 +43,7 @@
     </div>
     <div class="line"></div>
     <%--  TODO форма для ввода слова для поиска--%>
-    <form action="SearchServlet" method="post">
+    <form name="formSearch" action="SearchServlet" method="post" onsubmit="return validateForm()">
         <label><h4>Type a word</h4></label>
         <input style="width:30%" class="form-control" type="text" name="arg">
         <br/>

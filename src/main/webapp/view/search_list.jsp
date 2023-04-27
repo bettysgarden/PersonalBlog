@@ -24,10 +24,14 @@
             border: 1px solid black;
             /*width:1200px;*/
         }
-
         table.center {
             margin-left: auto;
             margin-right: auto;
+        }
+        #footer {
+            margin-top: 100px;
+            text-align: center;
+            margin-bottom: 20px;
         }
     </style>
 </head>

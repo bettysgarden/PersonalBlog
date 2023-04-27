@@ -10,6 +10,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>
+        function validateForm() {
+            var title = document.forms["formAddArticle"]["title"].value;
+            var content = document.forms["formAddArticle"]["content"].value;
+            if (title === "" || title == null) {
+                alert("Title must be filled out");
+                return false;
+            }
+            else if (content === "" || content == null) {
+                alert("Content must be filled out");
+                return false;
+            }
+        }
+    </script>
+    <style type="text/css">
+        #footer {
+            margin-top: 100px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 <div class="head_line"></div>
@@ -22,7 +43,7 @@
         </div>
     </div>
 
-    <form method="POST" action='CommandsServlet' name="formAddArticle">
+    <form method="POST" action='CommandsServlet' name="formAddArticle" onsubmit="return validateForm()">
         ID : <input style="width:30%" type="text" class="form-control" readonly="readonly" name="id"
                     value="<c:out value="${article.id}" />"/>
         <br/>

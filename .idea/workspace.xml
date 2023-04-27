@@ -9,10 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e461aba-5d9e-459e-97a3-ed5ce67cc065" name="Changes" comment="fix getConnection">
+    <list default="true" id="3e461aba-5d9e-459e-97a3-ed5ce67cc065" name="Changes" comment="fix search">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/article.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/article.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/edit_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/edit_add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/search_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/search_list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +302,7 @@
       <workItem from="1682062783224" duration="32206000" />
       <workItem from="1682359006017" duration="2448000" />
       <workItem from="1682405196097" duration="1000" />
-      <workItem from="1682593609927" duration="4009000" />
+      <workItem from="1682593609927" duration="5373000" />
     </task>
     <task id="LOCAL-00001" summary="servlets working">
       <created>1682065487057</created>
@@ -342,7 +346,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682594829814</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix search">
+      <created>1682597816805</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682597816805</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix search">
+      <created>1682597831269</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682597831269</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +396,8 @@
     <MESSAGE value="added comments" />
     <MESSAGE value="front-end" />
     <MESSAGE value="fix getConnection" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix getConnection" />
+    <MESSAGE value="fix search" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
