@@ -39,5 +39,9 @@
     </form>
     <div class="line"></div>
 </div>
+<div id="footer">
+    <a href="../index.jsp">MyBlog Home&nbsp;&nbsp;</a>|
+    <a href="#">&nbsp;&nbsp;Back to top</a>
+</div>
 </body>
 </html>

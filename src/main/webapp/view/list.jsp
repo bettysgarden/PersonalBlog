@@ -30,42 +30,57 @@
 </div>
 <div class="container">
     <br class="row">
-        <table class="center">
-            <thead>
-            <tr>
-                <th style="width: 50px; text-align: center">Id</th>
-                <th style="width: 200px; text-align: center">Title</th>
-                <th style="width: 600px; text-align: center">Content</th>
-                <th style="width: 100px; text-align: center">Time Added</th>
-                <th style="width: 80px; text-align: center">Comment Count</th>
-                <th style="width: 100px; text-align: center" colspan=2>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <%--@elvariable id="articles" type="java.util.List"--%>
-            <c:forEach items="${articles}" var="article">
+    <c:choose>
+        <c:when test="${size == 0}">
+            <div style="text-align: center;">
+                <h5>No articles yet.</h5>
+            </div>
+            <div class="line"></div>
+        </c:when>
+
+        <c:otherwise>
+            <table class="center">
+                <thead>
                 <tr>
-                    <td style="text-align: center"><c:out value="${article.id}"/></td>
-                        <%--            <td><c:out value="${article.title}"/></td>--%>
-
-                    <td><a href="ArticleServlet?id=<c:out value="${article.id}"/>"><c:out
-                            value="${article.title}"/></a></td>
-
-
-                    <td><c:out value="${article.content}"/></td>
-                    <td style="text-align: center"><c:out value="${article.time}"/></td>
-                    <td style="text-align: center"><c:out value="${article.commentCount}"/></td>
-                    <td style="text-align: center"><a href="CommandsServlet?action=edit&id=<c:out value="${article.id}"/>">Update</a></td>
-                    <td style="text-align: center"><a href="CommandsServlet?action=delete&id=<c:out value="${article.id}"/>">Delete</a></td>
+                    <th style="width: 50px; text-align: center">Id</th>
+                    <th style="width: 200px; text-align: center">Title</th>
+                    <th style="width: 600px; text-align: center">Content</th>
+                    <th style="width: 100px; text-align: center">Time Added</th>
+                    <th style="width: 80px; text-align: center">Comment Count</th>
+                    <th style="width: 100px; text-align: center" colspan=2>Action</th>
                 </tr>
-            </c:forEach>
-            </tbody>
-        </table>
-        </br>
-    <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="<c:url value="CommandsServlet?action=insert"/>">Add Article</a></button>
-    <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="/view/search.jsp">Search</a></button>
-<%--        <h3><a href="<c:url value="CommandsServlet?action=insert"/>">Add Article</a></h3>--%>
-    </div>
+                </thead>
+                <tbody>
+                    <%--@elvariable id="articles" type="java.util.List"--%>
+                <c:forEach items="${articles}" var="article">
+                    <tr>
+                        <td style="text-align: center"><c:out value="${article.id}"/></td>
+                            <%--            <td><c:out value="${article.title}"/></td>--%>
+
+                        <td><a href="ArticleServlet?id=<c:out value="${article.id}"/>"><c:out
+                                value="${article.title}"/></a></td>
+                        <td><c:out value="${article.content}"/></td>
+                        <td style="text-align: center"><c:out value="${article.time}"/></td>
+                        <td style="text-align: center"><c:out value="${article.commentCount}"/></td>
+                        <td style="text-align: center"><a
+                                href="CommandsServlet?action=edit&id=<c:out value="${article.id}"/>">Update</a></td>
+                        <td style="text-align: center"><a
+                                href="CommandsServlet?action=delete&id=<c:out value="${article.id}"/>">Delete</a></td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+            </br>
+            <button type="button" class="btn btn-secondary btn-lg btn-block"><a
+                    href="<c:url value="CommandsServlet?action=search"/>">Search</a></button>
+        </c:otherwise>
+    </c:choose>
+    <button type="button" class="btn btn-secondary btn-lg btn-block"><a
+            href="<c:url value="CommandsServlet?action=insert"/>">Add Article</a></button>
+</div>
+<div id="footer">
+    <a href="./index.jsp">MyBlog Home&nbsp;&nbsp;</a>|
+    <a href="#">&nbsp;&nbsp;Back to top</a>
 </div>
 </body>
 </html>

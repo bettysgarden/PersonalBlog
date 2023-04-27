@@ -11,11 +11,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import service.Implement.ArticleService;
 
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/")
 public class CommandsServlet extends HttpServlet {
     private static final String INSERT_OR_EDIT = "/view/edit_add.jsp";
     private static final String LIST_ARTICLE = "/view/list.jsp";
+    private static final String SEARCH = "/view/search.jsp";
     private final ArticleService as;
 
     public CommandsServlet() {
@@ -32,7 +34,10 @@ public class CommandsServlet extends HttpServlet {
                 long articleId = Long.parseLong(request.getParameter("id"));
                 as.deleteArticle(articleId);
                 forward = LIST_ARTICLE;
-                request.setAttribute("articles", as.getArticles());
+
+                List<Article> list = as.getArticles();
+                request.setAttribute("size", list.size());
+                request.setAttribute("articles", list);
 
             } else if (action.equalsIgnoreCase("edit")) {
                 forward = INSERT_OR_EDIT;
@@ -42,7 +47,12 @@ public class CommandsServlet extends HttpServlet {
 
             } else if (action.equalsIgnoreCase("listArticles")) {
                 forward = LIST_ARTICLE;
-                request.setAttribute("articles", as.getArticles());
+                List<Article> list = as.getArticles();
+
+                request.setAttribute("size", list.size());
+                request.setAttribute("articles", list);
+            } else if (action.equalsIgnoreCase("search")) {
+                forward = SEARCH;
             } else {
                 forward = INSERT_OR_EDIT;
             }

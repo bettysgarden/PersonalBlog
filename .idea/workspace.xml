@@ -9,16 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e461aba-5d9e-459e-97a3-ed5ce67cc065" name="Changes" comment="front-end">
+    <list default="true" id="3e461aba-5d9e-459e-97a3-ed5ce67cc065" name="Changes" comment="fix getConnection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Implement/ArticleDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Implement/ArticleDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Interface/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Interface/ArticleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Implement/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Implement/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Interface/ArticleServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Interface/ArticleServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Implement/ArticleDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Implement/ArticleDaoImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +29,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -43,6 +38,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -102,7 +100,7 @@
       <recent name="entity" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArticleDaoImplTest.testGetArticleById">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.7">
     <configuration name="ArticleDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PBArticles" />
       <extension name="coverage">
@@ -300,7 +298,7 @@
       <workItem from="1682062783224" duration="32206000" />
       <workItem from="1682359006017" duration="2448000" />
       <workItem from="1682405196097" duration="1000" />
-      <workItem from="1682593609927" duration="1067000" />
+      <workItem from="1682593609927" duration="4009000" />
     </task>
     <task id="LOCAL-00001" summary="servlets working">
       <created>1682065487057</created>
@@ -337,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682353960238</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix getConnection">
+      <created>1682594829814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682594829814</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +353,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -360,7 +377,8 @@
     <MESSAGE value="single article showing" />
     <MESSAGE value="added comments" />
     <MESSAGE value="front-end" />
-    <option name="LAST_COMMIT_MESSAGE" value="front-end" />
+    <MESSAGE value="fix getConnection" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix getConnection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -377,22 +395,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dao/Implement/UserDaoImpl.java</url>
-          <line>87</line>
+          <line>91</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java</url>
-          <line>73</line>
+          <line>83</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -405,6 +413,11 @@
           <line>180</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/SearchServlet.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/dao/Implement/CommentDaoTest.java</url>
           <line>16</line>
@@ -413,6 +426,24 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java</url>
+          <line>67</line>
+          <properties class="servlet.CommandsServlet" method="doPost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/CommandsServlet.java</url>
+          <line>27</line>
+          <properties class="servlet.CommandsServlet" method="doGet">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
