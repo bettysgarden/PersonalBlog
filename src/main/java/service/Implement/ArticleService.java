@@ -56,6 +56,19 @@ public class ArticleService implements ArticleServiceInterface {
             throw new BusinessException(ex);
         }
     }
+    @Override
+    public List<Article> getArticlesSearch(String argument) throws BusinessException {
+        try {
+            List<Article> list = articleDao.getArticlesSearch(argument);
+            for (Article a : list) {
+                ArticleUtils.cutContent(list);
+                ArticleUtils.cutTime(list);
+            }
+            return list;
+        } catch (DaoException ex) {
+            throw new BusinessException(ex);
+        }
+    }
 
     /**
      * Get all articles, intercept the length of the article, intercept the time, remove the hour, minute, second

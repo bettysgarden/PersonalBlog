@@ -2,6 +2,7 @@ package service.Interface;
 
 import entity.Article;
 import exception.BusinessException;
+import exception.DaoException;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
@@ -20,4 +21,6 @@ public interface ArticleServiceInterface {
     void updateArticle(Article article) throws BusinessException;
 
     void deleteArticle(long id) throws BusinessException;
+    List<Article> getArticlesSearch(String argument) throws BusinessException;
+
 }

@@ -63,6 +63,7 @@
         </table>
         </br>
     <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="<c:url value="CommandsServlet?action=insert"/>">Add Article</a></button>
+    <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="/view/search.jsp">Search</a></button>
 <%--        <h3><a href="<c:url value="CommandsServlet?action=insert"/>">Add Article</a></h3>--%>
     </div>
 </div>

@@ -19,4 +19,6 @@ public interface ArticleDao {
     Article getArticleById(long id) throws DaoException;
 
     void updateArticle(Article article) throws DaoException;
+
+    List<Article> getArticlesSearch(String argument) throws DaoException;
 }

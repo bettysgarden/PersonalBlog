@@ -9,10 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e461aba-5d9e-459e-97a3-ed5ce67cc065" name="Changes" comment="added comments">
+    <list default="true" id="3e461aba-5d9e-459e-97a3-ed5ce67cc065" name="Changes" comment="front-end">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/edit_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/edit_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Implement/ArticleDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Implement/ArticleDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Interface/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Interface/ArticleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Implement/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Implement/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Interface/ArticleServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Interface/ArticleServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Implement/ArticleDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Implement/ArticleDaoImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,28 +55,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/Elizaveta1/IdeaProjects/PersonalBlogLess_old/src/main/webapp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/Elizaveta1/IdeaProjects/PersonalBlogLess_old/src/main/webapp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -96,8 +102,8 @@
       <recent name="entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.7">
-    <configuration name="ArticleDaoImplTest.testGetAllArticles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ArticleDaoImplTest.testGetArticleById">
+    <configuration name="ArticleDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PBArticles" />
       <extension name="coverage">
         <pattern>
@@ -107,28 +113,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="dao.Implement" />
       <option name="MAIN_CLASS_NAME" value="dao.Implement.ArticleDaoImplTest" />
-      <option name="METHOD_NAME" value="testGetAllArticles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommentDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PBArticles" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.Implement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dao.Implement" />
-      <option name="MAIN_CLASS_NAME" value="dao.Implement.CommentDaoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentDaoTest.testAddComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArticleDaoImplTest.testGetArticleById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PBArticles" />
       <extension name="coverage">
         <pattern>
@@ -137,8 +127,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dao.Implement" />
-      <option name="MAIN_CLASS_NAME" value="dao.Implement.CommentDaoTest" />
-      <option name="METHOD_NAME" value="testAddComment" />
+      <option name="MAIN_CLASS_NAME" value="dao.Implement.ArticleDaoImplTest" />
+      <option name="METHOD_NAME" value="testGetArticleById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleDaoImplTest.testGetArticleSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PBArticles" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.Implement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao.Implement" />
+      <option name="MAIN_CLASS_NAME" value="dao.Implement.ArticleDaoImplTest" />
+      <option name="METHOD_NAME" value="testGetArticleSearch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,20 +270,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CommentDaoTest" />
-      <item itemvalue="JUnit.CommentDaoTest.testAddComment" />
+      <item itemvalue="JUnit.ArticleDaoImplTest" />
+      <item itemvalue="JUnit.ArticleDaoImplTest.testGetArticleById" />
+      <item itemvalue="JUnit.ArticleDaoImplTest.testGetArticleSearch" />
       <item itemvalue="JUnit.CommentDaoTest.testDeleteComment" />
       <item itemvalue="JUnit.CommentDaoTest.testGetComment" />
-      <item itemvalue="JUnit.ArticleDaoImplTest.testGetAllArticles" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.7" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ArticleDaoImplTest.testGetArticleById" />
+        <item itemvalue="JUnit.ArticleDaoImplTest" />
+        <item itemvalue="JUnit.ArticleDaoImplTest.testGetArticleSearch" />
         <item itemvalue="JUnit.CommentDaoTest.testDeleteComment" />
         <item itemvalue="JUnit.CommentDaoTest.testGetComment" />
-        <item itemvalue="JUnit.CommentDaoTest.testAddComment" />
-        <item itemvalue="JUnit.CommentDaoTest" />
-        <item itemvalue="JUnit.ArticleDaoImplTest.testGetAllArticles" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +297,10 @@
       <updated>1681895105759</updated>
       <workItem from="1681895106908" duration="712000" />
       <workItem from="1681895897696" duration="14759000" />
-      <workItem from="1682062783224" duration="31145000" />
+      <workItem from="1682062783224" duration="32206000" />
+      <workItem from="1682359006017" duration="2448000" />
+      <workItem from="1682405196097" duration="1000" />
+      <workItem from="1682593609927" duration="1067000" />
     </task>
     <task id="LOCAL-00001" summary="servlets working">
       <created>1682065487057</created>
@@ -321,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682350763815</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="front-end">
+      <created>1682353960238</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682353960238</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,16 +359,12 @@
     <MESSAGE value="small changes" />
     <MESSAGE value="single article showing" />
     <MESSAGE value="added comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
+    <MESSAGE value="front-end" />
+    <option name="LAST_COMMIT_MESSAGE" value="front-end" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/dao/Implement/ArticleDaoImplTest.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/servlet/ListArticlesServlet.java</url>
           <line>29</line>
@@ -360,7 +372,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dao/Implement/ArticleDaoImpl.java</url>
-          <line>47</line>
+          <line>55</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -387,6 +399,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/servlet/NewCommentServlet.java</url>
           <line>48</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dao/Implement/ArticleDaoImpl.java</url>
+          <line>180</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/dao/Implement/CommentDaoTest.java</url>

@@ -37,5 +37,15 @@
         <servlet-name>NewCommentServlet</servlet-name>
         <url-pattern>/NewCommentServlet</url-pattern>
     </servlet-mapping>
+    <!--Search servlet-->
+    <servlet>
+        <display-name>SearchServlet</display-name>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>servlet.SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

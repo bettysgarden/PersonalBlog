@@ -9,6 +9,7 @@ import utils.DBUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -17,6 +18,11 @@ import java.util.logging.Logger;
 public class ArticleDaoImpl implements ArticleDao {
     //    private static final Logger logger = LoggerFactory.getLogger(dao.Implement.ArticleDaoImpl.class);
     private static final Logger logger = Logger.getLogger(ArticleDaoImpl.class.getName());
+    private final ConnectionFactory builder = new ConnectionFactory();
+    protected Connection getConnection() throws SQLException {
+        return builder.getConnection();
+    }
+
 
     private static final String SELECT_LESS
             = "SELECT idarticle, title, time, comment, content FROM article WHERE TIME < ? ORDER BY time DESC";// TODO: 07.04.2023  use fields instead of *
@@ -24,6 +30,8 @@ public class ArticleDaoImpl implements ArticleDao {
             = "SELECT idarticle, title, time, comment, content FROM article WHERE TIME > ? ORDER BY time";
     private static final String SELECT_ALL
             = "SELECT idarticle, title, time, comment, content FROM article";
+    private static final String SEARCH
+            = "SELECT idarticle, title, time, comment, content FROM article WHERE lower(title) LIKE ?";
     private static final String SELECT
             = "SELECT idarticle, title, time, comment, content FROM article WHERE idarticle = ?";
     private static final String INSERT
@@ -36,7 +44,7 @@ public class ArticleDaoImpl implements ArticleDao {
     @Override
     public Article getANearArticle(String time, int lessOrMore) throws DaoException {
         Article article = null;
-        try (Connection con = ConnectionFactory.getConnection()) {
+        try (Connection con = getConnection()) {
             PreparedStatement pst = null;
             if (lessOrMore == this.LESS) {
                 pst = con.prepareStatement(SELECT_LESS);
@@ -67,7 +75,7 @@ public class ArticleDaoImpl implements ArticleDao {
     public long addArticle(Article article) throws DaoException {
         long articleId = -1L;
 
-        try (Connection con = ConnectionFactory.getConnection();
+        try (Connection con = getConnection();
              PreparedStatement pst = con.prepareStatement(INSERT, new String[]{"idarticle"})) {
             pst.setString(1, article.getTitle());
             pst.setString(2, article.getContent());
@@ -88,7 +96,7 @@ public class ArticleDaoImpl implements ArticleDao {
     }
     @Override
     public void deleteArticle(long id) throws DaoException {
-        try (Connection con = ConnectionFactory.getConnection();
+        try (Connection con = getConnection();
              PreparedStatement pst = con.prepareStatement(DELETE)) {
             pst.setLong(1, id);
             pst.executeUpdate();
@@ -98,24 +106,12 @@ public class ArticleDaoImpl implements ArticleDao {
             throw new DaoException(e);
         }
     }
-//    @Override
-//    public void deleteArticleByTitle(String title) throws DaoException {
-//        try (Connection con = ConnectionFactory.getConnection();
-//             PreparedStatement pst = con.prepareStatement(DELETE)) {
-//            pst.setString(1, title);
-//            pst.executeUpdate();
-//            DBUtils.Close(pst);
-//        } catch (Exception e) {
-//            logger.log(Level.SEVERE, "Error in db layer.");
-//            throw new DaoException(e);
-//        }
-//    }
 
     @Override
     public List<Article> getAllArticles() throws DaoException {
         List<Article> list = new ArrayList<>();
 
-        try (Connection con = ConnectionFactory.getConnection()) {
+        try (Connection con = getConnection()) {
             PreparedStatement pst = con.prepareStatement(SELECT_ALL);
             Article article;
 
@@ -139,7 +135,7 @@ public class ArticleDaoImpl implements ArticleDao {
 
     @Override
     public void updateArticle(Article article) throws DaoException {
-        try (Connection con = ConnectionFactory.getConnection();
+        try (Connection con = getConnection();
              PreparedStatement pst = con.prepareStatement(UPDATE)) {
             pst.setString(1, article.getContent());
             pst.setString(2, article.getTitle());
@@ -155,7 +151,7 @@ public class ArticleDaoImpl implements ArticleDao {
     public Article getArticleById(long id) throws DaoException {
         Article article = null;
 
-        try (Connection con = ConnectionFactory.getConnection();
+        try (Connection con = getConnection();
              PreparedStatement pst = con.prepareStatement(SELECT)) {
             pst.setLong(1, id);
 
@@ -175,4 +171,32 @@ public class ArticleDaoImpl implements ArticleDao {
         }
         return article;
     }
+    @Override
+    public List<Article> getArticlesSearch(String argument) throws DaoException{
+        List<Article> list = new ArrayList<>();
+
+        try (Connection con = getConnection()) {
+            PreparedStatement pst = con.prepareStatement(SEARCH);
+            Article article;
+            String prep = "%" + argument + "%";
+            pst.setString(1, prep);
+
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                article = new Article(rs.getLong("idArticle"),
+                        rs.getString("title"),
+                        rs.getString("time"),
+                        rs.getInt("comment"),
+                        rs.getString("content")
+                );
+                list.add(article);
+            }
+            DBUtils.Close(pst, rs);
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Error in db layer.");
+            throw new DaoException(e);
+        }
+        return list;
+    }
+
 }

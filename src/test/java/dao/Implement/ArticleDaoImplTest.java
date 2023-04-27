@@ -63,6 +63,20 @@ class ArticleDaoImplTest {
             e.printStackTrace();
         }
     }
+    @Test
+    public void testGetArticleSearch() {
+
+        ArticleDao dao = new ArticleDaoImpl();
+        try {
+
+            List<Article> getArticle = dao.getArticlesSearch("how");
+            for (Article a : getArticle) {
+                System.out.println(a.toString());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Test
     @AfterAll
