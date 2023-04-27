@@ -5,7 +5,8 @@ a personal blog site based on Jsp/Servlet
 
 *Личный блог*
 
-![Screenshot 2023-04-27 at 14 29 27](https://user-images.githubusercontent.com/99659178/234849092-9a362653-bade-4359-bf99-84c8f1839201.png)
+![Screenshot 2023-04-27 at 15 56 47](https://user-images.githubusercontent.com/99659178/234868685-47d64ce8-a566-4437-b8d5-0d02be419f12.png)
+
 
 ### Базовая функциональность:
 
